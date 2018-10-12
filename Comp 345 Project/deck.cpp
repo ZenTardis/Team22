@@ -66,7 +66,8 @@ Deck::Deck(){}
         {
             int rando = rand() % deck.size();                               //generate random number to use
             deck[rando].printCard();                                        //Print the cards values on screen for comfirmation
-            h.addCard(deck.at(rando));                                      //add chosen card to hand
+            Card c = deck.at(rando);            
+            h.addCard(c);                                                   //add chosen card to hand
             deck.erase(deck.begin()+rando);                                 //erase() will resize the vector so there will never be any empty slots
         }
     }

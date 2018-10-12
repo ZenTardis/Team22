@@ -31,9 +31,12 @@ int main(int argc, const char * argv[]) {
     myDeck.draw(myHand);
   
     myHand.testHand();
+
     
     cout << "Print new hand:" <<  endl;
     myHand.printHand();
+    
+    myHand.exchange();
     
     
     return 0;

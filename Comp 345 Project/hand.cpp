@@ -26,6 +26,10 @@ using namespace std;
         long length;
         length = cards.size();
         cout << length << endl;
+        cards.insert(cards.begin(), Card("Test Country",1));
+        length = cards.size();
+        cout << length << endl;
+        this->addCard(Card("Test Country2",2));
         
     }
     void Hand::printHand(){
