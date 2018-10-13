@@ -55,22 +55,23 @@ Deck::Deck(){}
          cout << "Deck Populated Successfully!" << endl;
     }
     
-    void Deck::draw(Hand h)
-    {
+    void Deck::draw(Hand* h){
         
-        if(deck.empty())
-        {
+        if(deck.empty()){
              cout << "There are no more cards left in the deck." << endl;   //check if there any cards left in a deck
         }
-        else                                                                //using a random number choose a card from the deck
-        {
-            int rando = rand() % deck.size();                               //generate random number to use
-            deck[rando].printCard();                                        //Print the cards values on screen for comfirmation
-            Card c = deck.at(rando);            
-            h.addCard(c);                                                   //add chosen card to hand
-            deck.erase(deck.begin()+rando);                                 //erase() will resize the vector so there will never be any empty slots
+        else if(!(h->maxHand())){
+            
+                int rando = rand() % deck.size();                               //generate random number to use
+                deck[rando].printCard();                                        //Print the cards values on screen for comfirmation
+                Card c = deck.at(rando);
+                h->addCard(c);                                                   //add chosen card to hand
+                deck.erase(deck.begin()+rando);                                 //erase() will resize the vector so there will never be any empty slots
+            }
+            else
+                cout << endl << "No room left in hand." << endl;
         }
-    }
+
     /*
      Build this when we need to load from a map file
      void populateDeck()

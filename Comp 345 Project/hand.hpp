@@ -20,6 +20,8 @@ public:
     void addCard(Card c);
     void exchange();
     void testHand();
+    bool maxHand();
+
 private:
     vector<Card> cards;
     int player;

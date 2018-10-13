@@ -10,14 +10,13 @@
 #include "card.hpp"
 using namespace std;
 
-
     /*
      Card types:
      1 = Infantry
      2 = Calvary
      3 = Artillery
      */
-    Card::Card(){}
+Card::Card(){}
 
 Card::Card(string Name, int type):country(Name),garrison(type)
     {

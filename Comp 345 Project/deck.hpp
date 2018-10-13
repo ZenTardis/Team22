@@ -9,7 +9,6 @@
 #ifndef deck_hpp
 #define deck_hpp
 #pragma once
-#include "card.hpp"
 #include "hand.hpp"
 #include <random>
 using namespace std;
@@ -23,7 +22,7 @@ public:
     Deck(int size);
     long getNumberOfCountries();
     void populateDeckTest();
-    void draw(Hand h);
+    void draw(Hand* h);
     void printDeck();
     
 private:
